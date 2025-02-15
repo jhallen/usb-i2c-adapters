@@ -295,9 +295,23 @@ Device Status:     0x0000
 
 ## ch341
 
+Chip:
+
+Board: Amazon description "WWZMDiB CH341A USB to UART/IIC/SPI/TTL/ISP Adapter EPP/MEM Parallel Converter"
+
+![ch341a board front](ch341a-board.jpg)
+![ch341a board back](ch341a-back.jpg)
+
+USB: Micro USB socket, 12 M
+
+Board price: $8
+
+Driver: Not included in Linux, get it here.  It's easy to compile.
+
+[https://github.com/frank-zago/ch341-i2c-spi-gpio](https://github.com/frank-zago/ch341-i2c-spi-gpio)
 
 Performance:
 
-Write: 1427 BPS with 16 byte packets
+Write:
 
 Read: 15725 BPS
