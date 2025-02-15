@@ -4,12 +4,13 @@ Ubuntu version: Ubuntu 22.04.4 LTS
 
 Kernel version: 6.8.0-52-generic
 
-## Silicon Labs CP2112
+## Chip: Silicon Labs CP2112
+
+Board: Search Amazon for this description:
+"WWZMDiB CP2112 Adapter Micro USB to SMBus I2C Communication with Wires"
 
 ![cp2112 board front](cp2112-board-photo.jpg)
 ![cp2112 board back](cp2112-board-back.jpg)
-
-Board: From Amazon "WWZMDiB CP2112 Adapter Micro USB to SMBus I2C Communication with Wires"
 
 Pull ups: 4.7K on SDA and SCL on the board
 
