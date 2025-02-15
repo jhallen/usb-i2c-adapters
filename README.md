@@ -4,15 +4,20 @@ Ubuntu version: Ubuntu 22.04.4 LTS
 
 Kernel version: 6.8.0-52-generic
 
-## Chip: Silicon Labs CP2112
+## Silicon Labs CP2112
+
+Chip: [cp2112 Datasheet](https://www.silabs.com/documents/public/data-sheets/cp2112-datasheet.pdf)
 
 Board: Search Amazon for this description:
 "WWZMDiB CP2112 Adapter Micro USB to SMBus I2C Communication with Wires"
 
+Board price: $10
+
 ![cp2112 board front](cp2112-board-photo.jpg)
 ![cp2112 board back](cp2112-board-back.jpg)
 
-Pull ups: 4.7K on SDA and SCL on the board
+Pull ups: 4.7K on SDA and SCL on the board (find R3 and R4 in board photo
+above)
 
 Voltage: 3.3 V, but board also supports 1.8V: Move 0-ohm jumper from R2 to
 R1.
@@ -45,11 +50,10 @@ Five byte read:
 
 ![cp2112-read.png](cp2112-read.png)
 
-Note repeated start:
+Note repeated start condition during the above read (SDA fall while SCL is
+high):
 
 ![cp2112-repeated.png](cp2112-repeated.png)
-
-
 
 dmesg on insertion:
 
@@ -75,37 +79,36 @@ lsmod:
 hid_cp2112             40960  0
 ~~~
 
-## Silicon Labs CP2112
+## ft260
+
+Chip: [FT260 Datasheet](https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT260.pdf)
+
+Board: [UMFT260EV1A](https://www.mouser.com/datasheet/2/163/DS_UMFT260EV1A-957841.pdf)
+
+Board price: $15
+
+Pull ups: 1K on SDA and SCL on the board
+
+Voltage: 3.3 V, but board also supports external supply of 1.8V - 3.3V
+(remove JP1 for this)
+
+Driver: it's built into Linux
+
+SCL frequency: 100 KHz only (driver doesn't seem to support changing it)
+
+Performance:
+
+Write: 1427 BPS with 16 byte packets
+
+Read: 4426 BPS with 40 byte packets
+
+Waveforms:
+
+## ch341
 
 
+Performance:
 
+Write: 1427 BPS with 16 byte packets
 
-
-
-
-		Write BPS	Size		Read BPS
-		---------			--------
-
-cp2112				40		4433
-		X		30
-		1379		29
-		1262		24
-		1331		20
-		1229		16
-		1139		8
-		796		4
-
-
-
-ft260				40		4426
-		X		29
-		1398		28		4196
-		1410		24		3559
-		1426		20
-		1427		16		3014
-		1328		8
-		1323		4		1323
-
-
-ch341						15725
-Missing PUPs?
+Read: 15725 BPS
