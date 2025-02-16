@@ -300,7 +300,7 @@ Device Status:     0x0000
 
 ## ch341
 
-Chip:
+Chip: [CH341A](https://www.bulcomp-eng.com/datasheet/WCH%20CH341A%20-%20Datasheet.pdf)
 
 Board: Amazon description "WWZMDiB CH341A USB to UART/IIC/SPI/TTL/ISP Adapter EPP/MEM Parallel Converter"
 
