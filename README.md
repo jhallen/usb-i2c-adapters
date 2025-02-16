@@ -1,9 +1,9 @@
 # usb-i2c-adapters
 
-Here is a review of some USB to I2C adapters.  These allow you to access I2C
-devices via USB by using Linux's /dev/i2c device driver.  I used one to
-develop a firmware updater application for an I2C accessible FPGA on my
-laptop instead of on the target Linux embedded system.
+Here is a review of some USB to I2C adapters that are well supported in
+Linux.  These allow you to access I2C devices via USB by using Linux's I2C
+API.  I used one to develop a firmware updater application for an I2C
+accessible FPGA on my laptop instead of on the target Linux embedded system.
 
 Ubuntu version: Ubuntu 22.04.4 LTS
 
@@ -45,7 +45,7 @@ Five byte write:
 
 ![cp2112-write.png](cp2112-write.png)
 
-Zoomed in, you can see the 100 MHz:
+Zoomed in, you can see that SCL is running at 100 KHz:
 
 ![cp2112-write-zoomed.png](cp2112-write-zoomed.png)
 
