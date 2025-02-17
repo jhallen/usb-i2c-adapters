@@ -192,7 +192,40 @@ Read: 4426 BPS with 40 byte packets
 
 Waveforms:
 
-Lsusb:
+Five byte read:
+
+![ft260-read.png](ft260-read.png)
+
+Note repeated start condition during the above read (SDA fall while SCL is
+high):
+
+![ft260-repeated.png](ft260-repeated.png)
+
+This shows gap between sucessive read bytes:
+
+![ft260-read-byte-gap.png](ft260-read-byte-gap.png)
+
+This shows gap between sucessive read transactions:
+
+![ft260-rdtrans-gap.png](ft260-rdtrans-gap.png)
+
+This shows the 100 KHz clock:
+
+![ft260-clock.png](ft260-clock.png)
+
+This shows gap between sucessive write transactions:
+
+![ft260-wrtrans-gap.png](ft260-wrtrans-gap.png)
+
+This shows the gap between write bytes:
+
+![ft260-write-byte-gap.png](ft260-write-byte-gap.png)
+
+Five byte write, showing startup:
+
+![ft260-write-startup.png](ft260-write-startup.png)
+
+lsusb:
 
 ~~~
 Bus 003 Device 053: ID 0403:6030 Future Technology Devices International, Ltd FT260
@@ -328,39 +361,4 @@ Performance:
 Write:
 
 Read: 15725 BPS
-
-Waveforms:
-
-Five byte read:
-
-![ft260-read.png](ft260-read.png)
-
-Note repeated start condition during the above read (SDA fall while SCL is
-high):
-
-![ft260-repeated.png](ft260-repeated.png)
-
-This shows gap between sucessive read bytes:
-
-![ft260-read-byte-gap.png](ft260-read-byte-gap.png)
-
-This shows gap between sucessive read transactions:
-
-![ft260-rdtrans-gap.png](ft260-rdtrans-gap.png)
-
-This shows the 100 KHz clock:
-
-![ft260-clock.png](ft260-clock.png)
-
-This shows gap between sucessive write transactions:
-
-![ft260-wrtrans-gap.png](ft260-wrtrans-gap.png)
-
-This shows the gap between write bytes:
-
-![ft260-write-byte-gap.png](ft260-write-byte-gap.png)
-
-Five byte write, showing startup:
-
-![ft260-write-startup.png](ft260-write-startup.png)
 
