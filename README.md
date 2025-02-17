@@ -62,6 +62,14 @@ high):
 
 ![cp2112-repeated.png](cp2112-repeated.png)
 
+This shows gap between sucessive read transactions:
+
+![cp2112-rdtrans-gap.png](cp2112-rdtrans-gap.png)
+
+This shows gap between sucessive write transactions:
+
+![cp2112-wrtrans-gap.png](cp2112-wrtrans-gap.png)
+
 dmesg on insertion:
 
 ~~~
